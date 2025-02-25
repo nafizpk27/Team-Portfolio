@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCD Team</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+    <style>
+        /* Custom styles on top of Bootstrap */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .navbar-brand, .btn, .nav-link {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('./assets/heros.jpg');
+            background-size: cover;
+            background-position: center;
+            margin-top: -70px;
+        }
+        .hero-section-content {
+            height: 102vh;
+        }
+        .transparent-nav {
+            background-color: transparent;
+            background-color: #00000056;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-brand {
+            width: 50px;
+            height: 50px;
+        }
+
+        .navbar-brand img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .team-member-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .card-desc {
+            font-size: 12px;
+        }
+        
+        .blog-img {
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .accent-bg {
+            /* background-color: #f8f9fa; */
+        }
+        
+        .footer {
+            /* background-color: #2c3e50;
+            color: white; */
+        }
+
+        /* Typing animation styles */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            background-color: white; /* Cursor color */
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { background-color: transparent; }
+            50% { background-color: white; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top transparent-nav fixed-top p-1">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="./assets/logo_white.png" alt="BCD Team">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white text-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center align-items-center hero-section-content">
+                <div class="col-md-10 ">
+                    <h1 class="display-4 fw-bold mb-4">
+                        <span id="typing-text"></span>
+                        <p class="bg-danger p-1 px-2 mt-3 rounded d-inline-block">   B C D   </p>
+                    </h1>
+                    <p class="lead mb-5 f">We Are Team BCD !</p>
+                    <a href="#projects" class="btn btn-dark btn-lg me-3">Our Work</a>
+                    <a href="#contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Meet Our Mad-Man's</h2>
+                <p class="lead">The Useless Shoot's Behind BCD</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center shadow p-2">
+                        <img src="./assets/member_photo/sayed.png" alt="Team Member" class="team-member-img rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Abu Sayed</h5>
+                            <span class="text-dark mb-2">Project Director</span>
+                            <p class="card-text">
+                                <span class="d-block">Session : 22-23 </span>
+                                <span>Famous For : Hi Vaya!</span>
+                                <p class="text-muted card-desc">
+                                    I'm Abu Sayed, the Project Director of Team BCD. I manage project planning, execution, and team coordination to ensure smooth operations and successful outcomes. My goal is to drive efficiency and innovation in every project we undertake.                            
+                                </p>
+                            </p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-facebook fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-twitter fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fas fa-envelope fs-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sadikul -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center shadow p-2">
+                        <img src="./assets/member_photo/sadikul.jpg" alt="Team Member" class="team-member-img rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Sadiqul Islam</h5>
+                            <span class="text-dark mb-2">Marketing & Project Analyst.</span>
+                            <p class="card-text">
+                                <span class="d-block">Session : 22-23 </span>
+                                <span>Famous For :  Marketing</span>
+                                <p class="text-muted card-desc">
+                                    I'm Sadiqul Islam, the Marketing & Project Analyst of Team BCD. I analyze market trends, develop strategies, and optimize project performance. My focus is on ensuring our projects align with industry demands and drive growth.                                
+                                </p>
+                            </p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-facebook fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-twitter fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fas fa-envelope fs-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nafiz -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center shadow p-2">
+                        <img src="./assets/member_photo/nafiz.jpg" alt="Team Member" class="team-member-img rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Nafiz Ahmed</h5>
+                            <span class="text-dark mb-2">Technical Lead! </span>
+                            <p class="card-text">
+                                <span class="d-block">Session : 22-23 </span>
+                                <span>Famous For : CR</span>
+                                <p class="text-muted card-desc">
+                                    I'm Nafis Ahmed, the Technical Lead of Team BCD. I oversee the technical aspects of our projects, ensuring smooth development and innovation. My focus is on problem-solving, optimizing performance, and guiding the team toward success.                                
+                                </p>
+                            </p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="https://www.facebook.com/nafiz.ahmed.27102005" class="text-dark mx-2"><i class="fab fa-facebook fs-5"></i></a>
+                                <a href="https://www.linkedin.com/in/nafiz-ahmed-88a474333/" class="text-dark mx-2"><i class="fab fa-linkedin fs-5"></i></a>
+                                <a href="https://x.com/nafizahmed27" class="text-dark mx-2"><i class="fab fa-twitter fs-5"></i></a>
+                                <a href="https://github.com/nafizpk27" class="text-dark mx-2"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fas fa-envelope fs-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Setu -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center shadow p-2">
+                        <img src="./assets/member_photo/setu.webp" alt="Team Member" class="team-member-img rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Mollika Khatun Setu.</h5>
+                            <span class="text-dark mb-2">Designer</span>
+                            <p class="card-text">
+                                <span class="d-block">Session : 24-25 </span>
+                                <span>Famous For : Abu Sayed</span>
+                                <p class="text-muted card-desc">
+                                    I'm Mollika Khatun Setu, a Graphic Designer at Team BCD. I create visually compelling designs that enhance our brand and projects. My focus is on creativity, precision, and impactful storytelling through design.                                
+                                </p>
+                            </p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-facebook fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-twitter fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fas fa-envelope fs-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Azad -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center shadow p-2">
+                        <img src="./assets/member_photo/azad.png" alt="Team Member" class="team-member-img rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Md. Azad Rahman.</h5>
+                            <span class="text-dark mb-2">Designer</span>
+                            <p class="card-text">
+                                <span class="d-block">Session : 23-24 </span>
+                                <span>Famous For : Nothing</span>
+                                <p class="text-muted card-desc">
+                                    I'm Azad Rahman, a Visual Designer at Team BCD. I specialize in crafting engaging visuals that bring ideas to life. My goal is to blend aesthetics with functionality for a lasting impression.                                
+                                </p>
+                            </p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-facebook fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-twitter fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fas fa-envelope fs-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tawsif -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 text-center shadow p-2">
+                        <img src="./assets/member_photo/tawsif.jpg" alt="Team Member" class="team-member-img rounded">
+                        <div class="card-body">
+                            <h5 class="card-title">Tawseef Ubaidullah</h5>
+                            <span class="text-dark mb-2">UI & UX Designer</span>
+                            <p class="card-text">
+                                <span class="d-block">Session : 24-25 </span>
+                                <span>Famous For : Nothing</span>
+                                <p class="text-muted card-desc">
+                                    I'm Tawseef Ubaidullah, the UI/UX Designer at Team BCD. I design intuitive and user-friendly interfaces, ensuring seamless user experiences. My focus is on usability, aesthetics, and interaction design.                                
+                                </p>
+                            </p>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-facebook fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-linkedin fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fab fa-twitter fs-5"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="text-dark mx-2"><i class="fas fa-envelope fs-5"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="./assets/bg_pic.jpg" alt="About BCD Team" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">About BCD Team</h2>
+                    <p class="lead">We are a diverse team of 8-10 professionals with expertise across multiple disciplines.</p>
+                    <p>Our team consists of a Project Director who oversees all operations, an MIS Officer handling information systems, talented Developers building robust applications, and creative Designers crafting beautiful interfaces.</p>
+                    <p>At BCD, we believe in collaborative problem-solving and innovative thinking to deliver outstanding results for our clients and projects.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-paint-brush text-dark me-3 fs-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Creative Design</h5>
+                                    <p class="mb-0">User -centered interfaces</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-code text-dark me-3 fs-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Development</h5>
+                                    <p class="mb-0">Cutting-edge technology</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-chart-line text-dark me-3 fs-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Project Management</h5>
+                                    <p class="mb-0">Efficient workflows</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-database text-dark me-3 fs-3"></i>
+                                <div>
+                                    <h5 class="mb-1">Information Systems</h5>
+                                    <p class="mb-0">Data-driven insights</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 accent-bg">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Projects</h2>
+                <p class="lead">Explore our portfolio of work across various domains</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow project-card">
+                        <img src="./assets/e_commerce.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Commerce Platform</h5>
+                            <p class="card-text">A full-stack e-commerce solution with integrated payment gateways and inventory management.</p>
+                            <div class="d-flex">
+                                <span class="badge bg-dark me-2">Web Development</span>
+                                <span class="badge bg-secondary">UI/UX</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-dark">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow project-card">
+                        <img src="./assets/dashboard.png" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Healthcare Dashboard</h5>
+                            <p class="card-text">An interactive dashboard for healthcare professionals to monitor patient data and trends.</p>
+                            <div class="d-flex">
+                                <span class="badge bg-dark me-2">Data Visualization</span>
+                                <span class="badge bg-secondary">Backend</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-dark">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow project-card">
+                        <img src="./assets/mobile_app2.webp" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile Education App</h5>
+                            <p class="card-text">A cross-platform application designed to facilitate remote learning and student engagement.</p>
+                            <div class="d-flex">
+                                <span class="badge bg-dark me-2">Mobile Dev</span>
+                                <span class="badge bg-secondary">UX Research</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="#" class="btn btn-outline-dark">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-dark">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-5 accent-bg">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Our Blog</h2>
+                <p class="lead">Insights, trends, and stories from the BCD team</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow">
+                        <img src="./assets/web_dev.avif" class="card-img-top blog-img" alt="Blog Post">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-dark">Technology</span>
+                                <small class="text-muted ms-2">Feb 18, 2025</small>
+                            </div>
+                            <h5 class="card-title">The Future of Web Development in 2025</h5>
+                            <p class="card-text">Exploring emerging technologies and methodologies that are reshaping the web development landscape.</p>
+                            <a href="#" class="btn btn-link text-dark p-0">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow">
+                        <img src="./assets/accsebility.avif" class="card-img-top blog-img" alt="Blog Post">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-dark">Design</span>
+                                <small class="text-muted ms-2">Feb 10, 2025</small>
+                            </div>
+                            <h5 class="card-title">Designing for Accessibility: Best Practices</h5>
+                            <p class="card-text">A comprehensive guide to creating inclusive digital experiences that work for all users regardless of abilities.</p>
+                            <a href="#" class="btn btn-link text-dark p-0">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow">
+                        <img src="./assets/team_colab.jpg" class="card-img-top blog-img" alt="Blog Post">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-dark">Project Management</span>
+                                <small class="text-muted ms-2">Jan 28, 2025</small>
+                            </div>
+                            <h5 class="card-title">Remote Team Collaboration: Our Approach</h5>
+                            <p class="card-text">How the BCD team maintains productivity and team cohesion while working across different locations.</p>
+                            <a href="#" class="btn btn-link text-dark p-0">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-dark">View All Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h2 class="fw-bold mb-4">Get In Touch</h2>
+                    <p class="lead mb-4">Have a project in mind or want to learn more about our services? We'd love to hear from you!</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-map-marker-alt text-dark fs-5 me-3"></i>
+                        <p class="mb-0">Rajshahi Polytechnic Institute, Rajshahi, Bangladesh</p>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-envelope text-dark fs-5 me-3"></i>
+                        <p class="mb-0">sde.sayed24@gmail.com</p>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <i class="fas fa-phone text-dark fs-5 me-3"></i>
+                        <p class="mb-0">+880 1717-963289</p>
+                    </div>
+                    <div class="d-flex">
+                        <a href="#" class="text-dark me-3 fs-4"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-dark me-3 fs-4"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-dark me-3 fs-4"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-dark me-3 fs-4"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="card shadow">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Send Us a Message</h3>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="John Doe">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" placeholder="john@example.com">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject" placeholder="Project Inquiry">
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" placeholder="Tell us about your project or inquiry..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-dark">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4 bg-dark">
+        <div class="container">
+            <div class="text-center text-white">
+                <p class="mb-0">© 2025 BCD Team & Abu Sayed. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Enable smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Activate navbar links based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if(pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Typing animation for the hero section
+        const text = "We are Team";
+        const text2 = "Meet Our Mad-Man's";
+        const typingText = document.getElementById("typing-text");
+        let index = 0;
+
+        function type() {
+            if (index < text.length) {
+                typingText.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(type, 80); // Adjust typing speed here
+            } else {
+                typingText.innerHTML += '<span class="cursor"></span>'; // Add cursor after typing
+            }
+        }
+
+        window.onload = type; // Start typing when the window loads
+    </script>
+</body>
+</html>
